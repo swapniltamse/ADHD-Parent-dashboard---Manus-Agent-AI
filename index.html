@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Connect | Dashboard for Parents</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/additional.css">
+    <link rel="stylesheet" href="css/mood-tracker.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo"><i class="fas fa-brain"></i>ADHD <span>Connect</span></a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="nav">
+                    <a href="#" class="nav-link">Dashboard</a>
+                    <a href="#tasks" class="nav-link">Tasks</a>
+                    <a href="#communication" class="nav-link">Communication</a>
+                    <a href="#resources" class="nav-link">Resources</a>
+                    <a href="#mood" class="nav-link">Mood Tracker</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Welcome Section -->
+        <section class="dashboard-section fade-in">
+            <div class="section-header">
+                <h2>Welcome, Parent</h2>
+                <p>Today is <span id="current-date">April 12, 2025</span></p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>Building understanding and connection with your teen/adult with ADHD.</p>
+                    <div class="card empathy-focus">
+                        <h3>Daily Gratitude</h3>
+                        <p>"I appreciate how you helped organize your workspace yesterday without being reminded."</p>
+                        <a href="#" class="btn btn-accent">Add New Gratitude</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <h3>Communication Progress</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 75%;"></div>
+                        </div>
+                        <p>75% positive interactions this week</p>
+                        <p><strong>+15%</strong> from last week</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="empathy-quote">
+                <p>"The biggest gift you can give someone with ADHD is to understand that their brain works differently, not less effectively."</p>
+                <cite>— Dr. Edward Hallowell, ADHD Expert</cite>
+            </div>
+        </section>
+
+        <!-- Task Tracking Section -->
+        <section id="tasks" class="dashboard-section task-section fade-in">
+            <div class="section-header">
+                <h2>Daily Tasks & Routines</h2>
+                <button class="btn btn-primary">Add New Task</button>
+            </div>
+            
+            <div class="card">
+                <h3>Morning Routine</h3>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <div class="task-priority priority-high"></div>
+                        <input type="checkbox" class="task-checkbox" id="task1">
+                        <label for="task1" class="task-label">Take medication</label>
+                        <div class="task-actions">
+                            <button class="task-btn"><i class="fas fa-edit"></i></button>
+                            <button class="task-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </li>
+                    <li class="task-item">
+                        <div class="task-priority priority-medium"></div>
+                        <input type="checkbox" class="task-checkbox" id="task2" checked>
+                        <label for="task2" class="task-label task-completed">Eat breakfast</label>
+                        <div class="task-actions">
+                            <button class="task-btn"><i class="fas fa-edit"></i></button>
+                            <button class="task-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </li>
+                    <li class="task-item">
+                        <div class="task-priority priority-low"></div>
+                        <input type="checkbox" class="task-checkbox" id="task3">
+                        <label for="task3" class="task-label">Review day's schedule together</label>
+                        <div class="task-actions">
+                            <button class="task-btn"><i class="fas fa-edit"></i></button>
+                            <button class="task-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>Evening Routine</h3>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <div class="task-priority priority-medium"></div>
+                        <input type="checkbox" class="task-checkbox" id="task4">
+                        <label for="task4" class="task-label">Homework check-in (without judgment)</label>
+                        <div class="task-actions">
+                            <button class="task-btn"><i class="fas fa-edit"></i></button>
+                            <button class="task-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </li>
+                    <li class="task-item">
+                        <div class="task-priority priority-high"></div>
+                        <input type="checkbox" class="task-checkbox" id="task5">
+                        <label for="task5" class="task-label">Evening medication</label>
+                        <div class="task-actions">
+                            <button class="task-btn"><i class="fas fa-edit"></i></button>
+                            <button class="task-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </li>
+                    <li class="task-item">
+                        <div class="task-priority priority-low"></div>
+                        <input type="checkbox" class="task-checkbox" id="task6">
+                        <label for="task6" class="task-label">Share one positive moment from the day</label>
+                        <div class="task-actions">
+                            <button class="task-btn"><i class="fas fa-edit"></i></button>
+                            <button class="task-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>Weekly Goals</h3>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <div class="task-priority priority-medium"></div>
+                        <input type="checkbox" class="task-checkbox" id="task7">
+                        <label for="task7" class="task-label">Have a distraction-free conversation (15 min)</label>
+                        <div class="task-actions">
+                            <button class="task-btn"><i class="fas fa-edit"></i></button>
+                            <button class="task-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </li>
+                    <li class="task-item">
+                        <div class="task-priority priority-medium"></div>
+                        <input type="checkbox" class="task-checkbox" id="task8" checked>
+                        <label for="task8" class="task-label task-completed">Celebrate a small win together</label>
+                        <div class="task-actions">
+                            <button class="task-btn"><i class="fas fa-edit"></i></button>
+                            <button class="task-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </li>
+                    <li class="task-item">
+                        <div class="task-priority priority-low"></div>
+                        <input type="checkbox" class="task-checkbox" id="task9">
+                        <label for="task9" class="task-label">Learn one new thing about ADHD together</label>
+                        <div class="task-actions">
+                            <button class="task-btn"><i class="fas fa-edit"></i></button>
+                            <button class="task-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <h3>Task Completion</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 60%;"></div>
+                        </div>
+                        <p>60% of tasks completed this week</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card empathy-focus">
+                        <h3>Empathy Tip</h3>
+                        <p>When a task is missed, ask "What got in the way?" instead of "Why didn't you do it?"</p>
+                        <p>This approach focuses on obstacles rather than blame.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Communication Log Section -->
+        <section id="communication" class="dashboard-section communication-section fade-in">
+            <div class="section-header">
+                <h2>Communication Log</h2>
+                <button class="btn btn-primary" id="add-communication-btn">Add New Entry</button>
+            </div>
+            
+            <div class="empathy-quote">
+                <p>"The way we talk to our children becomes their inner voice. Choose your words with care and empathy."</p>
+                <cite>— Adapted from Peggy O'Mara</cite>
+            </div>
+            
+            <div class="card">
+                <h3>Communication Highlights</h3>
+                <div class="highlights-container">
+                    <div class="highlight-card positive">
+                        <div class="highlight-date">Today</div>
+                        <div class="highlight-content">
+                            <i class="fas fa-heart highlight-icon"></i>
+                            <p>We had a calm discussion about college applications without any raised voices.</p>
+                        </div>
+                        <div class="highlight-tags">
+                            <span class="tag">Milestone</span>
+                            <span class="tag">Patience</span>
+                        </div>
+                    </div>
+                    <div class="highlight-card gratitude">
+                        <div class="highlight-date">Yesterday</div>
+                        <div class="highlight-content">
+                            <i class="fas fa-hands highlight-icon"></i>
+                            <p>I'm grateful for how you helped your sister with her homework even when you were tired.</p>
+                        </div>
+                        <div class="highlight-tags">
+                            <span class="tag">Gratitude</span>
+                            <span class="tag">Kindness</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Communication Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">April 12</div>
+                        <div class="timeline-content">
+                            <h4>Morning Check-in</h4>
+                            <p>Started the day by acknowledging how quickly they got ready for school.</p>
+                            <div class="emotion-indicator positive">Positive</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">April 11</div>
+                        <div class="timeline-content">
+                            <h4>Dinner Conversation</h4>
+                            <p>Discussed upcoming project deadlines without pressure. Used active listening techniques.</p>
+                            <div class="emotion-indicator positive">Positive</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">April 10</div>
+                        <div class="timeline-content">
+                            <h4>Difficult Moment</h4>
+                            <p>Frustration over forgotten appointment. Took a break and revisited conversation when calmer.</p>
+                            <div class="emotion-indicator challenging">Challenging</div>
+                            <div class="perspective-switch">
+                                <h4><i class="fas fa-exchange-alt"></i> Their Perspective</h4>
+                                <p>"I felt overwhelmed by all the appointments I'm trying to keep track of. When you reminded me about the missed one, I felt like I was disappointing you again."</p>
+                            </div>
+                            <div class="resolution">
+                                <h5>Resolution</h5>
+                                <p>Set up a shared calendar reminder system together.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">April 9</div>
+                        <div class="timeline-content">
+                            <h4>Gratitude Moment</h4>
+                            <p>Expressed appreciation for helping with dinner preparation without being asked.</p>
+                            <div class="emotion-indicator gratitude">Gratitude</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <h3>Communication Stats</h3>
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <div class="stat-value">75%</div>
+                                <div class="stat-label">Positive Interactions</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">12</div>
+                                <div class="stat-label">Gratitude Moments</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">5</div>
+                                <div class="stat-label">Resolved Challenges</div>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 75%;"></div>
+                        </div>
+                  
+(Content truncated due to size limit. Use line ranges to read in chunks)

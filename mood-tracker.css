@@ -1,0 +1,512 @@
+/* Updated Mood Tracker CSS with white background and improved text readability */
+
+/* Mood Tracker Section */
+.mood-section {
+    margin-top: 2rem;
+}
+
+.mood-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+    border-top: 3px solid var(--secondary);
+    position: relative;
+}
+
+.mood-input-container:before {
+    content: '❤️ Empathy Focus';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--secondary);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.mood-question {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.mood-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.mood-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    width: 80px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.mood-option:hover {
+    background-color: rgba(255, 209, 102, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mood-option.selected {
+    background-color: rgba(255, 107, 107, 0.1);
+    border: 2px solid var(--secondary);
+    transform: scale(1.05);
+}
+
+.mood-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.mood-option:hover .mood-emoji {
+    transform: scale(1.2);
+}
+
+.mood-label {
+    font-size: 0.85rem;
+    text-align: center;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.mood-note-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.mood-note {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    resize: vertical;
+    min-height: 80px;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+    color: var(--text-dark);
+}
+
+.mood-note:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(255, 209, 102, 0.2);
+    outline: none;
+}
+
+/* Perspective prompt */
+.perspective-prompt {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(255, 107, 107, 0.05);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--secondary);
+}
+
+.perspective-prompt h4 {
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.perspective-prompt h4 i {
+    margin-right: 0.5rem;
+}
+
+.perspective-prompt p {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+/* Mood Calendar */
+.mood-calendar {
+    margin-bottom: 2rem;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.calendar-nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.calendar-nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+    font-size: 1.25rem;
+    transition: var(--transition);
+}
+
+.calendar-nav-btn:hover {
+    color: var(--secondary);
+    transform: scale(1.1);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+}
+
+.calendar-day-header {
+    text-align: center;
+    font-weight: 500;
+    padding: 0.5rem;
+    color: var(--primary);
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-day:hover {
+    background-color: rgba(78, 205, 196, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-date {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-dark);
+}
+
+.calendar-mood {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.calendar-day:hover .calendar-mood {
+    transform: scale(1.2);
+}
+
+.calendar-day.today {
+    border: 2px solid var(--accent);
+    background-color: rgba(255, 209, 102, 0.1);
+}
+
+.calendar-day.empty {
+    background-color: rgba(0, 0, 0, 0.02);
+    box-shadow: none;
+    cursor: default;
+}
+
+.calendar-day.empty:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Mood Trends */
+.mood-trends {
+    margin-bottom: 2rem;
+}
+
+.trend-chart {
+    height: 200px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    position: relative;
+    box-shadow: var(--box-shadow);
+}
+
+.chart-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-medium);
+    border: 1px dashed #ddd;
+    border-radius: var(--border-radius);
+    background-color: rgba(78, 205, 196, 0.05);
+}
+
+.mood-insights {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.insight-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    transition: var(--transition);
+    border-top: 3px solid var(--secondary);
+}
+
+.insight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.insight-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.insight-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+}
+
+/* Mood Journal - Enhanced for empathy */
+.mood-journal {
+    margin-bottom: 2rem;
+}
+
+.journal-entries {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.journal-entry {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+    border-left: 3px solid var(--primary);
+    position: relative;
+}
+
+.journal-entry:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.journal-entry:after {
+    content: 'Their Perspective';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--secondary);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.journal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.journal-date {
+    font-size: 0.85rem;
+    color: var(--text-medium);
+}
+
+.journal-mood {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.journal-mood-emoji {
+    font-size: 1.5rem;
+}
+
+.journal-mood-label {
+    font-size: 0.85rem;
+    color: var(--text-medium);
+}
+
+.journal-content {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.journal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Mood Correlations */
+.mood-correlations {
+    margin-bottom: 2rem;
+}
+
+.correlation-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    margin-bottom: 0.75rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.correlation-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.correlation-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: var(--primary);
+}
+
+.correlation-content {
+    flex: 1;
+}
+
+.correlation-title {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: var(--primary);
+}
+
+.correlation-strength {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.correlation-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.correlation-value {
+    height: 100%;
+    background: linear-gradient(to right, var(--primary), var(--info));
+    border-radius: 4px;
+}
+
+.correlation-percentage {
+    font-size: 0.85rem;
+    color: var(--text-medium);
+    width: 40px;
+    text-align: right;
+    font-weight: 500;
+}
+
+/* Empathy Building Tips - Enhanced */
+.empathy-tips {
+    background-color: rgba(255, 107, 107, 0.05);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border-left: 4px solid var(--secondary);
+}
+
+.empathy-tips h3 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.empathy-tips h3 i {
+    margin-right: 0.5rem;
+}
+
+.empathy-tips-list {
+    list-style: none;
+}
+
+.empathy-tips-list li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-dark);
+}
+
+.empathy-tips-list li:before {
+    content: '❤️';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mood-options {
+        justify-content: center;
+    }
+    
+    .mood-option {
+        width: 70px;
+    }
+    
+    .calendar-grid {
+        gap: 0.25rem;
+    }
+    
+    .calendar-day-header,
+    .calendar-date {
+        font-size: 0.75rem;
+    }
+    
+    .calendar-mood {
+        font-size: 1.25rem;
+    }
+    
+    .mood-insights {
+        grid-template-columns: 1fr;
+    }
+}
