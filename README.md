@@ -2,7 +2,7 @@
 
 A responsive, empathy-focused dashboard for parents of teenagers and adults with ADHD.
 
-![ADHD Connect Dashboard](https://ghpvseod.manus.space/screenshot.png)
+[![ADHD Connect Dashboard](https://ghpvseod.manus.space/screenshot.png)](https://ghpvseod.manus.space/)
 
 ## Project Overview
 
